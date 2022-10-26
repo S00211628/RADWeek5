@@ -195,6 +195,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210260827099_initial migration.cs" />
+    <Compile Include="Migrations\202210260827099_initial migration.designer.cs">
+      <DependentUpon>202210260827099_initial migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -279,6 +284,11 @@
       <Project>{1d24839f-5cac-4e1a-a2e7-d77e84582ff2}</Project>
       <Name>Rad3012223.ClubData.ClassLibrary.Week5</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202210260827099_initial migration.resx">
+      <DependentUpon>202210260827099_initial migration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
