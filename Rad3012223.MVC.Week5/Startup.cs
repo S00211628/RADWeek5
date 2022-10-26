@@ -11,6 +11,7 @@ namespace Rad3012223.MVC.Week5
         {
             ConfigureAuth(app);
             ActivityAPIClient.Track(StudentID: "S00211628", StudentName: "Martin Melody", activityName: "RAD301 Week5Lab 2223", Task: "Project Structure Setup");
+        
         }
     }
 }
