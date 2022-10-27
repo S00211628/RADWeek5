@@ -199,6 +199,26 @@
     <Compile Include="Migrations\202210260827099_initial migration.designer.cs">
       <DependentUpon>202210260827099_initial migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210260832148_Entity ID Field added.cs" />
+    <Compile Include="Migrations\202210260832148_Entity ID Field added.designer.cs">
+      <DependentUpon>202210260832148_Entity ID Field added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210260859134_test for mvc.cs" />
+    <Compile Include="Migrations\202210260859134_test for mvc.designer.cs">
+      <DependentUpon>202210260859134_test for mvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210260909122_change connection string mvc.cs" />
+    <Compile Include="Migrations\202210260909122_change connection string mvc.designer.cs">
+      <DependentUpon>202210260909122_change connection string mvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210271750393_Seeding Application Roles.cs" />
+    <Compile Include="Migrations\202210271750393_Seeding Application Roles.designer.cs">
+      <DependentUpon>202210271750393_Seeding Application Roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210272206060_task 27 update database.cs" />
+    <Compile Include="Migrations\202210272206060_task 27 update database.designer.cs">
+      <DependentUpon>202210272206060_task 27 update database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -280,15 +300,30 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\202210260827099_initial migration.resx">
+      <DependentUpon>202210260827099_initial migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210260832148_Entity ID Field added.resx">
+      <DependentUpon>202210260832148_Entity ID Field added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210260859134_test for mvc.resx">
+      <DependentUpon>202210260859134_test for mvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210260909122_change connection string mvc.resx">
+      <DependentUpon>202210260909122_change connection string mvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210271750393_Seeding Application Roles.resx">
+      <DependentUpon>202210271750393_Seeding Application Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210272206060_task 27 update database.resx">
+      <DependentUpon>202210272206060_task 27 update database.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Rad3012223.ClubData.ClassLibrary.Week5\Rad3012223.ClubData.ClassLibrary.Week5.csproj">
       <Project>{1d24839f-5cac-4e1a-a2e7-d77e84582ff2}</Project>
       <Name>Rad3012223.ClubData.ClassLibrary.Week5</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202210260827099_initial migration.resx">
-      <DependentUpon>202210260827099_initial migration.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
