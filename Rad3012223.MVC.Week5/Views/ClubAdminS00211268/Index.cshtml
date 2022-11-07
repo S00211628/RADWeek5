@@ -1,7 +1,42 @@
-﻿
+﻿@model Rad3012223.ClubData.ClassLibrary.Week5.Models.Club
+
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
+<div>
+    <h4>Club</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClubName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClubName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adminID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adminID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClubId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
