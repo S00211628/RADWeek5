@@ -10,9 +10,9 @@ namespace Rad3012223.ClubData.ClassLibrary.Week5.Models
 {
     public class Week5ClubContext :DbContext
     {
-        public DbSet<Club> Clubs { get; set; }
-        public DbSet<Member> Members { get; set; }
-        public DbSet<Student> Students { get; set; }
+        public DbSet<Club> Club { get; set; }
+        public DbSet<Member> Member { get; set; }
+        public DbSet<Student> Student { get; set; }
 
         public Week5ClubContext()
             : base("name=Week52223Connection")

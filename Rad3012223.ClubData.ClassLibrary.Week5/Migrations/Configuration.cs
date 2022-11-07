@@ -41,7 +41,6 @@
             List<Student> students = new List<Student>();
             List<Member> members = new List<Member>();
 
-            int val = 0;
             sdto.ForEach(rec =>
             {
                 students.Add(
@@ -52,7 +51,7 @@
                         StudentID =  rec.StudentID,
                     });
             });
-            context.Students.AddOrUpdate(s => s.StudentID, students.ToArray());
+            context.Student.AddOrUpdate(s => s.StudentID, students.ToArray());
             context.SaveChanges();
 
 
@@ -83,10 +82,10 @@
 
                 
             
-            context.Members.AddOrUpdate(m => m.MemberID, members.ToArray());
+            context.Member.AddOrUpdate(m => m.MemberID, members.ToArray());
             context.SaveChanges();
 
-            context.Clubs.AddOrUpdate(c => c.ClubId, new Models.Club[]
+            context.Club.AddOrUpdate(c => c.ClubId, new Models.Club[]
                 {
                     new Models.Club{ClubId = 1, ClubName = "Swimming Club", CreationDate = new DateTime(year:2019, month:12,day:9), adminID=93, clubMembers = members }
                 });
@@ -118,3 +117,6 @@
 
     }
 }
+
+
+// add clubs look at week 4 think I got it working there.
