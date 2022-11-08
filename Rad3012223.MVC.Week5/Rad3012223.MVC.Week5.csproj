@@ -220,6 +220,10 @@
     <Compile Include="Migrations\202210272206060_task 27 update database.designer.cs">
       <DependentUpon>202210272206060_task 27 update database.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211081507011_update the database.cs" />
+    <Compile Include="Migrations\202211081507011_update the database.designer.cs">
+      <DependentUpon>202211081507011_update the database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\MainClubViewModel.cs" />
@@ -320,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210272206060_task 27 update database.resx">
       <DependentUpon>202210272206060_task 27 update database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211081507011_update the database.resx">
+      <DependentUpon>202211081507011_update the database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

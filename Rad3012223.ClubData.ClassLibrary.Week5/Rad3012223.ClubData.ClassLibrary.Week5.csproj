@@ -131,14 +131,6 @@
     <Compile Include="Migrations\202210271900037_adding students, members and clubs to database.designer.cs">
       <DependentUpon>202210271900037_adding students, members and clubs to database.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202211071122428_test1.cs" />
-    <Compile Include="Migrations\202211071122428_test1.designer.cs">
-      <DependentUpon>202211071122428_test1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211071137062_test2.cs" />
-    <Compile Include="Migrations\202211071137062_test2.designer.cs">
-      <DependentUpon>202211071137062_test2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Club.cs" />
     <Compile Include="Models\Member.cs" />
@@ -157,12 +149,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210271900037_adding students, members and clubs to database.resx">
       <DependentUpon>202210271900037_adding students, members and clubs to database.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211071122428_test1.resx">
-      <DependentUpon>202211071122428_test1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211071137062_test2.resx">
-      <DependentUpon>202211071137062_test2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentList1.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
