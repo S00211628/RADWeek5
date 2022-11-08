@@ -331,7 +331,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Rad3012223.ClubData.ClassLibrary.Week5\Rad3012223.ClubData.ClassLibrary.Week5.csproj">
-      <Project>{1d24839f-5cac-4e1a-a2e7-d77e84582ff2}</Project>
+      <Project>{1D24839F-5CAC-4E1A-A2E7-D77E84582FF2}</Project>
       <Name>Rad3012223.ClubData.ClassLibrary.Week5</Name>
     </ProjectReference>
   </ItemGroup>

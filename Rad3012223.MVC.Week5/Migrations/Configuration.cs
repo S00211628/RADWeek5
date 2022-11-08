@@ -73,8 +73,8 @@
         {
             using(Week5ClubContext cx = new Week5ClubContext())
             {
-                Club club = cx.Clubs.First();
-                Member adminMember = cx.Members.FirstOrDefault(m => m.MemberID == club.adminID);
+                Club club = cx.Club.First();
+                Member adminMember = cx.Member.FirstOrDefault(m => m.MemberID == club.adminID);
                 club.clubMembers.ForEach(m =>
                 {
                     IdentityResult result = manager.Create(new ApplicationUser
