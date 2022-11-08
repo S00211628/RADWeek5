@@ -130,8 +130,8 @@
                 Console.WriteLine(members[i].StudentID);
             }
 
-            context.Members.AddOrUpdate(m => new { m.AssociatedClub, m.approved, m.StudentID }, members.ToArray());
-            context.Clubs.AddOrUpdate(club => club.ClubName, new Club[]
+            context.Member.AddOrUpdate(m => new { m.AssociatedClub, m.approved, m.StudentID }, members.ToArray());
+            context.Club.AddOrUpdate(club => club.ClubName, new Club[]
             {
                 new Club
                 {
@@ -166,18 +166,53 @@
             List<Student> students2 = GetStudents(context, 10);
             List<Student> students3 = GetStudents(context, 10);
 
+            List<Member> members = new List<Member>();
+
+            students1.ForEach(rec =>
+            {
+                members.Add(
+                    new Member
+                    {
+                        StudentID = rec.StudentID,
+                        approved = true,
+                        AssociatedClub = 1
+                    });
+            });
+
+            students2.ForEach(rec =>
+            {
+                members.Add(
+                    new Member
+                    {
+                        StudentID = rec.StudentID,
+                        approved = true,
+                        AssociatedClub = 2
+                    });
+            });
+
+            students3.ForEach(rec =>
+            {
+                members.Add(
+                    new Member
+                    {
+                        StudentID = rec.StudentID,
+                        approved = true,
+                        AssociatedClub = 3
+                    });
+            });
+
             return members;
         }
 
         private List<Student> GetStudents(Week5ClubContext context, int count)
         {
             // Create a random list of studnets ids
-            var randomSetStudent = context.Students.Select(s => new { s.StudentID, r = Guid.NewGuid() });
+            var randomSetStudent = context.Student.Select(s => new { s.StudentID, r = Guid.NewGuid() });
             // Sort them and take 10
             List<string> subset = randomSetStudent.OrderBy(s => s.r)
                 .Select(s => s.StudentID.ToString()).Take(count).ToList();
             // Return the selected st students as a realized list
-            return context.Students.Where(s => subset.Contains(s.StudentID)).ToList();
+            return context.Student.Where(s => subset.Contains(s.StudentID)).ToList();
         }
 
         public static List<T> Get<T>(string resourceName)

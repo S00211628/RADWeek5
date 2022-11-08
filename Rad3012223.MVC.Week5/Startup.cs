@@ -10,7 +10,7 @@ namespace Rad3012223.MVC.Week5
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            ActivityAPIClient.Track(StudentID: "S00211628", StudentName: "Martin Melody", activityName: "RAD301 Week5Lab 2223", Task: "Week 6 Index controller and View Implemented and styled");
+            ActivityAPIClient.Track(StudentID: "S00211628", StudentName: "Martin Melody", activityName: "RAD301 Week5Lab 2223", Task: "Week 6 Posting Approval");
         
         }
     }
