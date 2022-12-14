@@ -1,19 +1,15 @@
 ﻿namespace Rad3012223.MVC.Week5.Migrations
 {
-    using Microsoft.Ajax.Utilities;
-    using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
-    using Rad3012223.ClubData.ClassLibrary.Week5.DTOs;
+    using Microsoft.AspNet.Identity;
     using Rad3012223.ClubData.ClassLibrary.Week5.Models;
     using Rad3012223.MVC.Week5.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using System.Xml.Linq;
-    using System.Xml.XPath;
     using Tracker.WebAPIClient;
-    using Microsoft.Owin;
+    using Microsoft.Ajax.Utilities;
     using Member = ClubData.ClassLibrary.Week5.Models.Member;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Rad3012223.MVC.Week5.Models.ApplicationDbContext>
@@ -99,3 +95,4 @@
         }
     }
 }
+

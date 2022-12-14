@@ -1,0 +1,77 @@
+﻿@model  IEnumerable<Rad3012223.ClubData.ClassLibrary.Week5.Models.Club>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Choose club to approve members</h2>
+<h3>Logged in as club admin @ViewBag.Name</h3>
+
+
+<table class="table table-striped table-bordered table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClubName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </th>
+        <th class="text-center">
+            Approve Member for chosen club
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClubName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreationDate)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Approve members", "Approve",
+                   new { ClubId = item.ClubId },
+                   new { @class = "center-block btn btn-primary" })
+                </td>
+            </tr>
+        }
+
+</table>
+
+@*<div>
+        <h4>Club</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ClubName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ClubName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreationDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.adminID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.adminID)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ClubId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@

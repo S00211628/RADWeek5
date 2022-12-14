@@ -1,7 +1,6 @@
-using Microsoft.Owin;
 using Owin;
+using Tracker.WebAPIClient;
 
-[assembly: OwinStartup(typeof(Rad3012223.ClubData.ClassLibrary.Week5.StartupOwin))]
 
 namespace Rad3012223.ClubData.ClassLibrary.Week5
 {
@@ -9,7 +8,7 @@ namespace Rad3012223.ClubData.ClassLibrary.Week5
     {
         public void Configuration(IAppBuilder app)
         {
-            //AuthStartup.ConfigureAuth(app);
+            ActivityAPIClient.Track(StudentID: "S00211628", StudentName: "Martin Melody", activityName: "RAD301 Week6 Lab 2022", Task: "Week 6 Testing Authori");
         }
     }
 }

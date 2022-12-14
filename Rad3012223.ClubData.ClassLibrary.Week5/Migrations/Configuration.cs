@@ -25,48 +25,17 @@
         protected override void Seed(Rad3012223.ClubData.ClassLibrary.Week5.Models.Week5ClubContext context)
         {
             
-            ActivityAPIClient.Track(StudentID: "S00210326", StudentName: "Paul Mc Gonigle", activityName: "RAD301 Week5 Lab 2223"
+            ActivityAPIClient.Track(StudentID: "S00211628", StudentName: "Martin Melody", activityName: "RAD301 Week5 Lab 2223"
             , Task: "Seeding Clubs and Member Data");
 
-            //addClubs(context);
-            //get_students();
-            //context.SaveChanges();
-
-
-
-
             List<Student> students = get_students();
-            context.SaveChanges();
             context.Students.AddOrUpdate(s => s.StudentID, students.ToArray());
             context.SaveChanges();
-            context.SaveChanges();
-
-
-
-
             addClubs(context);
             context.SaveChanges();
 
-
         }
-        //private static void addClubs(Rad3012223.ClubData.ClassLibrary.Week5.Models.Week5ClubContext context)
-        //{
-        //    context.Clubs.AddOrUpdate(club => club.ClubName, new Club[] {
-        //       new Club
-        //       {
-
-        //           ClubName = "The Chess Club",
-        //           CreationDate = new DateTime(day:25, month:01, year:2017),
-
-
-        //       } // End of First club added other clubs can be added next
-               
-               
-
-        //    } // End of Clubs array
-        //         );// End of Add or Update
-        //    context.SaveChanges();
-        //}
+       
         private static List<Student> get_students()
         {
             // Get the list of DTO records from the resource
@@ -169,13 +138,7 @@
             List<Member> members = new List<Member>();
 
             members = context.Members.ToList();
-
-            Console.WriteLine("here");
-            for (int i = 0; i < members.Count; i++)
-            {
-                Console.WriteLine(members[i].MemberID);
-            }
-
+           
             List<Member> club1 = new List<Member>();
             List<Member> club2 = new List<Member>();
             List<Member> club3 = new List<Member>();

@@ -25,7 +25,7 @@ namespace Rad3012223.MVC.Week5.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("Week52223Connection", throwIfV1Schema: false)
+            : base("Week62223Connection", throwIfV1Schema: false)
         {
         }
 
