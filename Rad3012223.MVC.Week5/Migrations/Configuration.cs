@@ -13,6 +13,7 @@
     using System.Xml.Linq;
     using System.Xml.XPath;
     using Tracker.WebAPIClient;
+    using Microsoft.Owin;
     using Member = ClubData.ClassLibrary.Week5.Models.Member;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Rad3012223.MVC.Week5.Models.ApplicationDbContext>
@@ -62,8 +63,8 @@
                     PasswordHash = ps.HashPassword("Rad3022021$1")
                 });
 
-
             seed_appliation_members(manager, context);
+
 
             context.SaveChanges();
 
@@ -71,7 +72,7 @@
 
         private void seed_appliation_members(UserManager<ApplicationUser> manager, ApplicationDbContext context)
         {
-            using(Week5ClubContext cx = new Week5ClubContext())
+            using (Week5ClubContext cx = new Week5ClubContext())
             {
                 Club club = cx.Clubs.First();
                 Member adminMember = cx.Members.FirstOrDefault(m => m.MemberID == club.adminID);

@@ -15,7 +15,7 @@ namespace Rad3012223.ClubData.ClassLibrary.Week5.Models
         public DbSet<Student> Students { get; set; }
 
         public Week5ClubContext()
-            : base("name=Week52223Connection")
+            : base("name=Week62223Connection")
         {
         }
 

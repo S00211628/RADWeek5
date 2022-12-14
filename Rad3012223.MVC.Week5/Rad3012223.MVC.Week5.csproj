@@ -219,6 +219,14 @@
     <Compile Include="Migrations\202210272206060_task 27 update database.designer.cs">
       <DependentUpon>202210272206060_task 27 update database.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212141139598_last migration .cs" />
+    <Compile Include="Migrations\202212141139598_last migration .designer.cs">
+      <DependentUpon>202212141139598_last migration .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212141239280_adding-club-admins.cs" />
+    <Compile Include="Migrations\202212141239280_adding-club-admins.designer.cs">
+      <DependentUpon>202212141239280_adding-club-admins.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -317,6 +325,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210272206060_task 27 update database.resx">
       <DependentUpon>202210272206060_task 27 update database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212141139598_last migration .resx">
+      <DependentUpon>202212141139598_last migration .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212141239280_adding-club-admins.resx">
+      <DependentUpon>202212141239280_adding-club-admins.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
