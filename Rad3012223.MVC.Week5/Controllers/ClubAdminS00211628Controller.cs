@@ -88,5 +88,37 @@ namespace Rad3012223.MVC.Week5.Controllers
         }
 
 
+        [HttpPost]
+        public ActionResult Approve(ClubViewModels model)
+        {
+
+            var m = model;
+
+            if (ModelState.IsValid)
+            {
+                if (model.Unapproved != null)
+                {
+                    foreach (var member in model.Unapproved)
+                    {
+                        db.Members.Find(member.MemberID).approved = member.approved;
+                    }
+                }
+                if(model.Approved !=null)
+                {
+                    foreach (var member in model.Approved)
+                    {
+                        db.Members.Find(member.MemberID).approved = member.approved;
+                    }
+                }
+                
+               
+                db.SaveChanges();
+                return RedirectToAction("Approve", new { Clubid = model.ClubID });
+            }
+
+            return View(model);
+        }
+
+
     }
 }
