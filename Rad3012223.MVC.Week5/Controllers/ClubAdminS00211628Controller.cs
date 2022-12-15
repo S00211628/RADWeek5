@@ -59,6 +59,34 @@ namespace Rad3012223.MVC.Week5.Controllers
                 return View();
             }
 
+
         }
+
+
+        public ActionResult Approve(int? ClubId)
+        {
+
+            Club club = db.Clubs.Find(ClubId);
+
+            var clubid = club.ClubId;
+            var clubName = club.ClubName;
+            var unapproved = club.clubMembers.Where(m => m.approved == false).ToList();
+            var approved = club.clubMembers.Where(m => m.approved == true).ToList();
+
+
+
+            ClubViewModels mcvm = new ClubViewModels
+            {
+                ClubID = clubid,
+                ClubName = clubName,
+                Unapproved = unapproved,
+                Approved = approved,
+            };
+
+            return View(mcvm);
+
+        }
+
+
     }
 }

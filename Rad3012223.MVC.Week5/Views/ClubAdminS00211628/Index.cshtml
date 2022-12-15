@@ -22,24 +22,29 @@
     </tr>
 
     @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ClubName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreationDate)
-                </td>
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClubName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
 
-                <td>
-                    @Html.ActionLink("Approve members", "Approve",
-                   new { ClubId = item.ClubId },
-                   new { @class = "center-block btn btn-primary" })
-                </td>
-            </tr>
-        }
+            <td>
+                @Html.ActionLink("Approve members", "Approve",
+               new { ClubId = item.ClubId },
+               new { @class = "center-block btn btn-primary" })
+            </td>
+        </tr>
+    }
 
 </table>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { clubid =  Model.ToList()}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
 
 @*<div>
         <h4>Club</h4>
@@ -70,8 +75,5 @@
             </dd>
 
         </dl>
-    </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ClubId }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>*@
+    </div>*@
+

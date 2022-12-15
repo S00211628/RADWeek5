@@ -11,6 +11,7 @@
     using Tracker.WebAPIClient;
     using Microsoft.Ajax.Utilities;
     using Member = ClubData.ClassLibrary.Week5.Models.Member;
+    using System.Collections.Generic;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Rad3012223.MVC.Week5.Models.ApplicationDbContext>
     {
@@ -59,7 +60,15 @@
                     PasswordHash = ps.HashPassword("Rad3022021$1")
                 });
 
+
+            var admin = context.Users.Where(u => u.EntityID == "Admin").FirstOrDefault();
+
+
+            manager.AddToRoles(admin.Id, new string[] { "Admin" });
+
             seed_appliation_members(manager, context);
+
+
 
 
             context.SaveChanges();
@@ -85,12 +94,25 @@
                     if (result.Succeeded)
                     {
                         ApplicationUser clubAdmin = manager.FindByEmail(adminMember.StudentID + "@itsligo.ie");
+                        var member = context.Users.Where(u => u.EntityID == m.StudentID).FirstOrDefault();
                         if (clubAdmin != null)
                         {
                             manager.AddToRoles(clubAdmin.Id, new string[] { "ClubAdmin" });
                         }
+                        else
+                        {
+                            manager.AddToRoles(member.Id, new string[] { "Member" });
+                        }
+
+                    
                     }
                 });
+
+
+
+
+
+                
             }
         }
     }
